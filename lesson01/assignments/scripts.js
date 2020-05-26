@@ -23,16 +23,33 @@
 //         }
 //     });
 // });
-$(function () {
-let initialData = [3, 6, 9, 10, 11, 20, 37, 45, 56, 89];
-      initialArray = $('.initialArray');
-      input = $('.input'),
-      btn = input.next(),
-      result = btn.next();
+$(function() {
+  let initialData = [3, 6, 9, 10, 11, 20, 37, 45, 56, 89];
+  initialArray = $('.initialArray');
+  input = $('.input'),
+  submit = $('.submit'),
+  filterArray = $('.filterArray');
 
-      // set the initial array at the top of the page
-      initialData.forEach(function(value, key){
-        initialArray.append(`Key: ${key} - Value: ${value}<br> `);
-      });
+    // set the initial array at the top of the page
+    initialData.forEach(function(value, key) {
+      initialArray.append(`Key: ${key} - Value: ${value}<br> `);
+    });
 
+  // filter function
+  submit.on('click', function() {
+    //Grab the input value and parse it into a number
+    const inputVal = input.val();
+    const filterVal = parseInt(inputVal);
+    // Verify the user gave us a real number
+    if (!isNaN(filterVal)) {
+      // Filter numbers greater than user input
+      let filterResults = initialData.filter(value => value > filterVal);
+      // Creates new array and appends it to index.html section
+      filterResults.forEach(function(value, key) {
+          filterArray.append(`Key ${key} with a value of ${value} is greater than ${filterVal} <br>`);
+        });
+      // Clears the input box
+      input.val('');
+    }
+  });
 });
