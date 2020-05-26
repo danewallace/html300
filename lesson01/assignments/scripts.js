@@ -28,10 +28,13 @@ $(function() {
   initialArray = $('.initialArray');
   filterInput = $('.filterInput');
   filterSubmit = $('.filterSubmit');
+  filterArray = $('.filterArray');
   mapSubmit = $('.mapSubmit');
   mapInput = $('.mapInput');
-  filterArray = $('.filterArray');
   mapArray = $('.mapArray');
+  includesSubmit = $('.includesSubmit');
+  includesInput = $('.includesInput');
+  includesOutput = $('.includesOutput');
 
     // set the initial array at the top of the page
     initialData.forEach(function(value, key) {
@@ -40,6 +43,7 @@ $(function() {
 
   // filter function
   filterSubmit.on('click', function() {
+    // Console log button click for debugging
     console.log('functionSubmit clicked');
     //Grab the input value and parse it into a number
     const inputVal = filterInput.val();
@@ -60,6 +64,7 @@ $(function() {
 
   // map function
   mapSubmit.on('click', function() {
+    // Console log button click for debugging
     console.log('mapSubmit clicked');
     //Grab the input value and parse it into a number
     const mapInputVal = mapInput.val();
@@ -77,4 +82,20 @@ $(function() {
       mapInput.val('');
     }
   });
+
+  // includes function
+  includesSubmit.on('click', function() {
+    const originalString = "Who's the more foolish, the fool, or the fool who follows him?";
+    // Console log button click for debugging
+    console.log('includesSubmit clicked');
+    const includesInputVal = includesInput.val();
+    // Perform includes method on original string from user-submitted string
+    let includesResult = originalString.includes(`${includesInputVal}`);
+    // Append result to index.html
+    includesOutput.append(`${includesResult}<br>`);
+    // Clears the input box
+    includesInput.val('');
+  });
+
+
 });
