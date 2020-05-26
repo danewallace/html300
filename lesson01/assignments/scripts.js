@@ -26,9 +26,12 @@
 $(function() {
   let initialData = [3, 6, 9, 10, 11, 20, 37, 45, 56, 89];
   initialArray = $('.initialArray');
-  input = $('.input'),
-  submit = $('.submit'),
+  filterInput = $('.filterInput');
+  filterSubmit = $('.filterSubmit');
+  mapSubmit = $('.mapSubmit');
+  mapInput = $('.mapInput');
   filterArray = $('.filterArray');
+  mapArray = $('.mapArray');
 
     // set the initial array at the top of the page
     initialData.forEach(function(value, key) {
@@ -36,20 +39,42 @@ $(function() {
     });
 
   // filter function
-  submit.on('click', function() {
+  filterSubmit.on('click', function() {
+    console.log('functionSubmit clicked');
     //Grab the input value and parse it into a number
-    const inputVal = input.val();
+    const inputVal = filterInput.val();
     const filterVal = parseInt(inputVal);
     // Verify the user gave us a real number
     if (!isNaN(filterVal)) {
+      console.log('breakTwo');
       // Filter numbers greater than user input
       let filterResults = initialData.filter(value => value > filterVal);
       // Creates new array and appends it to index.html section
       filterResults.forEach(function(value, key) {
-          filterArray.append(`Key ${key} with a value of ${value} is greater than ${filterVal} <br>`);
+          filterArray.append(`New key ${key} with a value of ${value} is greater than ${filterVal} <br>`);
         });
       // Clears the input box
-      input.val('');
+      filterInput.val('');
+    }
+  });
+
+  // map function
+  mapSubmit.on('click', function() {
+    console.log('mapSubmit clicked');
+    //Grab the input value and parse it into a number
+    const mapInputVal = mapInput.val();
+    const mapVal = parseInt(mapInputVal);
+    // Verify the user gave us a real number
+    if (!isNaN(mapVal)) {
+      console.log('breakOne');
+      // map results by adding submitting value to original value
+      let mapResults = initialData.map(value => value + mapVal);
+      // Creates new array and appends it to index.html section
+      mapResults.forEach(function(value, key) {
+          mapArray.append(`Key ${key} has a new value of ${value} after adding ${mapVal}<br>`);
+        });
+      // Clears the input box
+      mapInput.val('');
     }
   });
 });
