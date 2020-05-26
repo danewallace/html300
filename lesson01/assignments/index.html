@@ -14,8 +14,8 @@
 </head>
 
 <body>
-    <main class="main">
-        <h1>Using jQuery and ES6+ Methods</h1>
+  <main class="main">
+    <h1>Using jQuery and ES6+ Methods</h1>
 
     <!-- Original array -->
     <section class="originalArray">
@@ -30,32 +30,55 @@
       <h2>Filter</h2>
       <h3>Reduce the set of matched elements to those that match the selector or pass the function's test.</h3>
       <p class="detail">Submit a number. The output will display all numbers in the original array that are greater than the submitted number.</p>
-     <input type="number" class="filterInput">
-     <input class="filterSubmit" type="submit"></input>
-     <p class="filterArray"></p>
+      <!-- Section input -->
+      <input type="number" class="filterInput">
+      <!-- Section button -->
+      <input class="filterSubmit" type="submit"></input>
+      <!-- Section output updated from scripts.js -->
+      <p class="filterOutput"></p>
     </section>
 
     <!-- Map function -->
     <section class="mapSection">
       <h2>Map</h2>
-      <h3>Pass each element in the current matched set through a function, producing a new jQuery object containing the return values.</h3>
+      <h3>Creates a new array from another array. It uses the same elements from the parent array and creates a new array of elements by calling a function.</h3>
       <p class="detail">Submit a number. The output will display the sum of the submitted number and the array's original number. </p>
-     <input type="number" class="mapInput">
-     <input class="mapSubmit" type="submit"></input>
-     <p class="mapArray"></p>
+      <!-- Section input -->
+      <input type="number" class="mapInput">
+      <!-- Section button -->
+      <input class="mapSubmit" type="submit"></input>
+      <!-- Section output updated from scripts.js -->
+      <p class="mapOutput"></p>
+    </section>
+
+    <!-- Find function -->
+    <section class="findSection">
+      <h2>Find</h2>
+      <h3>Lets you iterate through an array and get the first element back that causes the given callback function to return true. </h3>
+      <p class="detail">Submit a number. The first number in the original array that is greater than the submitted number will be output below. </p>
+      <!-- Section input -->
+      <input type="text" class="findInput">
+      <!-- Section button -->
+      <input class="findSubmit" type="submit"></input>
+      <!-- Section output updated from scripts.js -->
+      <p class="findOutput"></p>
     </section>
 
     <!-- Includes function -->
     <section class="includesSection">
       <h2>Includes</h2>
       <h3>Determines whether a string contains the characters of a specified string.</h3>
-      <p class="detail">Submit a string. If the submitted string is included within the sample text, the output will be true. Otherwise, it will be false.  </p>
-      <p class="sample">Sample text: Who's the more foolish, the fool, or the fool who follows him?  </p>
-     <input type="text" class="includesInput">
-     <input class="includesSubmit" type="submit"></input>
-     <p class="includesOutput"></p>
+      <p class="detail">Submit a string. If the submitted string is included within the sample text, the output will be true. Otherwise, it will be false. </p>
+      <p class="sample">Sample text: Who's the more foolish, the fool, or the fool who follows him? </p>
+      <!-- Section input -->
+      <input type="text" class="includesInput">
+      <!-- Section button -->
+      <input class="includesSubmit" type="submit"></input>
+      <!-- Section output updated from scripts.js -->
+      <p class="includesOutput"></p>
     </section>
 
-    </main>
+  </main>
 </body>
+
 </html>
