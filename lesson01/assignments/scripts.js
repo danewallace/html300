@@ -23,14 +23,16 @@
 //         }
 //     });
 // });
+$(function () {
+let initialData = [3, 6, 9, 10, 11, 20, 37, 45, 56, 89];
+      initialArray = $('.initialArray');
+      input = $('.input'),
+      btn = input.next(),
+      result = btn.next();
 
-let initialData = [10, 16, 36, 37, 57, 78];
-initialArray = $('.initialArray');
+      // set the initial array at the top of the page
+      initialData.forEach(function(value, key){
+        initialArray.append(`Key: ${key} - Value: ${value}<br> `);
+      });
 
-$(function() {
-    initialData.forEach(function(value, key) {
-    console.log(`Key: ${key} - Value: ${value}`);
-    initialArray.append(`Key: ${key} `);
-    initialArray.append(`- Value: ${value}<br>`);
-  })
-})
+});
