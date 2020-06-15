@@ -1,3 +1,17 @@
 .main {
     padding: 2rem
 }
+
+h2 {
+  color: blue;
+  margin-bottom: 0;
+}
+
+h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.detail {
+  font-style: italic;
+}

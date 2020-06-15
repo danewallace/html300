@@ -1,35 +1,84 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Assignment 1 - Part 2 Example</title>
-    <!-- jQuery CDN -->
-    <script 
-        src="https://code.jquery.com/jquery-3.3.1.js" 
-        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-        crossorigin="anonymous">
-    </script>
-    <!-- Local Files -->
-    <script src="scripts.js"></script>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Assignment 1 - Part 2</title>
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
+  </script>
+  <!-- Local Files -->
+  <script src="scripts.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <main class="main">
-        <h1>Using ES6+ Methods</h1>
-        <section class="input-set">
-            <!-- Input -->
-            <input type="text" class="input">
-            <!-- Submit for Input -->
-            <input class="submit" type="submit"></input>
-            <!-- Result markup with hook for answer -->
-            <p class="markup">My total with reduce is now: <span class="sum"></span></p>
-        </section>
-       
-        
-    </main>
+  <main class="main">
+    <h1>Using jQuery and ES6+ Methods</h1>
+
+    <!-- Original array -->
+    <section class="originalArray">
+      <h2>forEach</h2>
+      <h3>Calls a function for each element in the array.</h3>
+      <p class="detail">This function will output keys and values from a pre-created array saved in /scripts.js</p>
+      <p class="initialArray"></p>
+    </section>
+
+    <!-- Filter function -->
+    <section class="filterSection">
+      <h2>Filter</h2>
+      <h3>Reduce the set of matched elements to those that match the selector or pass the function's test.</h3>
+      <p class="detail">Submit a number. The output will display all numbers in the original array that are greater than the submitted number.</p>
+      <!-- Section input -->
+      <input type="number" class="filterInput">
+      <!-- Section button -->
+      <input class="filterSubmit" type="submit"></input>
+      <!-- Section output updated from scripts.js -->
+      <p class="filterOutput"></p>
+    </section>
+
+    <!-- Map function -->
+    <section class="mapSection">
+      <h2>Map</h2>
+      <h3>Creates a new array from another array. It uses the same elements from the parent array and creates a new array of elements by calling a function.</h3>
+      <p class="detail">Submit a number. The output will display the sum of the submitted number and the array's original number. </p>
+      <!-- Section input -->
+      <input type="number" class="mapInput">
+      <!-- Section button -->
+      <input class="mapSubmit" type="submit"></input>
+      <!-- Section output updated from scripts.js -->
+      <p class="mapOutput"></p>
+    </section>
+
+    <!-- Find function -->
+    <section class="findSection">
+      <h2>Find</h2>
+      <h3>Lets you iterate through an array and get the first element back that causes the given callback function to return true. </h3>
+      <p class="detail">Submit a number. The first number in the original array that is greater than the submitted number will be output below. </p>
+      <!-- Section input -->
+      <input type="text" class="findInput">
+      <!-- Section button -->
+      <input class="findSubmit" type="submit"></input>
+      <!-- Section output updated from scripts.js -->
+      <p class="findOutput"></p>
+    </section>
+
+    <!-- Includes function -->
+    <section class="includesSection">
+      <h2>Includes</h2>
+      <h3>Determines whether a string contains the characters of a specified string.</h3>
+      <p class="detail">Submit a string. If the submitted string is included within the sample text, the output will be true. Otherwise, it will be false. </p>
+      <p class="sample">Sample text: Who's the more foolish, the fool, or the fool who follows him? </p>
+      <!-- Section input -->
+      <input type="text" class="includesInput">
+      <!-- Section button -->
+      <input class="includesSubmit" type="submit"></input>
+      <!-- Section output updated from scripts.js -->
+      <p class="includesOutput"></p>
+    </section>
+
+  </main>
 </body>
 
 </html>
