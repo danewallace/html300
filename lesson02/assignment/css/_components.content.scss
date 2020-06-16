@@ -13,5 +13,23 @@ html {
 }
 
 h1 {
-    color: $red;  
+    color: $red;
+}
+
+.card {
+  // Height and width from xd file
+  width:951px;
+  height:474px;
+  background: $lightblue;
+  display: flex;               /* establish flex container */
+  align-items: center;         /* center aligns card body  */
+}
+
+.card-body {
+  position: relative;
+  background: $white;
+  margin: auto;
+  width: 90%;
+  height: 80%;
+  padding: 10px;
 }
