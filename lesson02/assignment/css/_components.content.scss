@@ -18,11 +18,11 @@ h1 {
 
 .card {
   // Height and width from xd file
-  width:951px;
+  width:90%;
   height:474px;
   background: $lightblue;
-  display: flex;               /* establish flex container */
-  align-items: center;         /* center aligns card body  */
+  display: flex;
+  align-items: center;
 }
 
 .card-body {
@@ -32,9 +32,9 @@ h1 {
   width: 90%;
   height: 80%;
   padding: 40px;
+  padding-left: 0px;
   // Flex container settings
   display: flex;
-  flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: stretch;
   align-content: stretch;
@@ -69,14 +69,14 @@ h1 {
 }
 
 .headshot {
-  width: 66%;
+  width: 200px;
   border-radius: 50%;
   display: block;
   margin: auto;
 }
 
 .name {
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-bottom: .5rem;
   color: $darkgray;
   font-weight: 900;
@@ -90,4 +90,15 @@ h1 {
   font-style: italic;
   text-align: center;
   font-size: 18px;
+}
+
+/* Tablets, 768px and under */
+@include media-query("mobile") {
+  .card {
+    /* display in column */
+    .card-body {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
 }
