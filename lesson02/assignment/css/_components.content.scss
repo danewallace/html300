@@ -19,7 +19,7 @@ h1 {
 .card {
   // Height and width from xd file
   width:90%;
-  height:474px;
+  height: 472px;
   background: $lightblue;
   display: flex;
   align-items: center;
@@ -30,7 +30,6 @@ h1 {
   background: $white;
   margin: auto;
   width: 90%;
-  height: 80%;
   padding: 40px;
   padding-left: 0px;
   // Flex container settings
@@ -96,9 +95,14 @@ h1 {
 @include media-query("mobile") {
   .card {
     /* display in column */
+    height: 800px;
     .card-body {
       flex-direction: column;
       justify-content: center;
+      align-items: center;
+    }
+    .card-copy {
+      margin-left: 2rem;
     }
   }
 }
