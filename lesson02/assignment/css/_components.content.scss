@@ -31,5 +31,42 @@ h1 {
   margin: auto;
   width: 90%;
   height: 80%;
-  padding: 10px;
+  padding: 40px;
+  // Flex container settings
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+}
+
+.card-image {
+  align-self: stretch;
+  order: 0;
+  flex: 0 0 0;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 40%;
+  border-radius: 1px;
+  border-color: black;
+  border-style: dashed;
+}
+
+.card-copy{
+  align-self: stretch;
+  order: 0;
+  flex: 2 0 0px;
+  flex-grow: 2;
+  flex-shrink: 0;
+  flex-basis: 90px;
+  background: $lightgray;
+}
+
+.about-item {
+  color: $darkgray;
+  list-style-type: none;
+  margin-top: 1.2rem;
+  &:first-child {
+    margin-top: 2.2rem;
+  }
 }
