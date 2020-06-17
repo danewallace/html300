@@ -46,6 +46,8 @@ $breakpoints: (
     "sm"            "screen and (min-width: 30em)",
     "small"         "screen and (min-width: 20em)",
     "tiny"          "screen and (max-width: 320px)",
+    // Added phone breakpoint
+    "phone"         "screen and (max-width: 540px)",
     "retina"        "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)",
     "ie"            "all and(-ms-high-contrast: none), (-ms-high-contrast: active)",
     "ipad"          "screen and (min-device-width : 768px) and (max-device-width : 1024px)"
