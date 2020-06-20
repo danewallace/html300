@@ -1,17 +1,106 @@
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *,
 *:after,
 *:before {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 .main {
-    padding: 2rem;
+  padding: 2rem;
 }
 
 h1 {
-    color: $red;  
+  color: $red;
+}
+// Card container styling
+.card {
+  width: 90%;
+  height: 472px;
+  background: $lightblue;
+  display: flex;
+  align-items: center;
+  // Nested styling for card-body
+  .card-body {
+    position: relative;
+    background: $white;
+    margin: 50px;
+    width: 90%;
+    padding: 40px 40px 40px 0;
+    // Flex container settings
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+  }
+  // Nested styling for image and copy within card-body
+  .card-image {
+    align-self: stretch;
+    flex-basis: 40%;
+    margin-right: 10px;
+    margin-left: 10px;
+
+    .headshot {
+      width: 200px;
+      border-radius: 50%;
+      display: block;
+      margin: auto;
+    }
+    // Nested styling for name and title within card-image
+    .name {
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+      color: $darkgray;
+      font-weight: 900;
+      text-align: center;
+      font-size: 24px;
+    }
+    // Extend styles from .name class
+    .title {
+      @extend .name;
+      font-size: 18px;
+      font-style: italic;
+      margin-top: 0.5rem;
+    }
+  }
+  // Card copy components nested within card body
+  .card-copy {
+    align-self: stretch;
+    flex: 2 0 0;
+    flex-grow: 2;
+    flex-basis: 90px;
+    background: $lightgray;
+
+    .about-item {
+      color: $darkgray;
+      list-style-type: none;
+      margin-top: 1.2rem;
+
+      &:first-child {
+        margin-top: 2.2rem;
+      }
+    }
+  }
+}
+// Medium devices (tablets - 767px)
+@include media-query("mobile") {
+  .card {
+    height: 800px;
+
+    .card-body {
+      padding-left: 40px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+// Small devices (phones - 540px)
+@include media-query("phone") {
+  // Decrease left padding of decription on small screen sizes
+  .about {
+    padding-left: 10px;
+  }
 }
