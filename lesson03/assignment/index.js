@@ -78,6 +78,7 @@ const cardsHTML = cards.map(function(el) {
   </article>
   `;
 });
+// Logging to console for troubleshooting/debuggin purposes
 console.log($(".cards"));
 
 // Hook to display data on index.html within .cards section
