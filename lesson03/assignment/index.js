@@ -66,12 +66,12 @@ const cardsHTML = cards.map(function(el) {
       </div>
       <div class="card-copy">
         <ul class="about">
-          <li class="about-item"><strong>Company:</strong>${el.company}</li>
-          <li class="about-item"><strong>Experience:</strong>${el.experience}</li>
-          <li class="about-item"><strong>School:</strong>${el.school}</li>
-          <li class="about-item"><strong>Major:</strong>${el.major}</li>
-          <li class="about-item"><strong>Email:</strong>${el.email}</li>
-          <li class="about-item linkedin"><img src="img/linkedin.svg" alt="linkedin logo">${el.linkedInUrl}</li>
+          <li class="about-item"><strong>Company:</strong> ${el.company}</li>
+          <li class="about-item"><strong>Experience:</strong> ${el.experience}</li>
+          <li class="about-item"><strong>School:</strong> ${el.school}</li>
+          <li class="about-item"><strong>Major:</strong> ${el.major}</li>
+          <li class="about-item"><strong>Email:</strong> ${el.email}</li>
+          <li class="about-item linkedin"><img src="img/linkedin.svg" alt="linkedin logo"> ${el.linkedInUrl}</li>
         </ul>
       </div>
     </div>

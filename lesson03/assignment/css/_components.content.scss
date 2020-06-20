@@ -22,13 +22,14 @@ h1 {
   background: $lightblue;
   display: flex;
   align-items: center;
+  margin-bottom: 20px;
   // Nested styling for card-body
   .card-body {
     position: relative;
     background: $white;
     margin: 50px;
     width: 90%;
-    padding: 40px 40px 40px 0;
+    padding: 40px 40px 40px 0px;
     // Flex container settings
     display: flex;
     justify-content: flex-start;
