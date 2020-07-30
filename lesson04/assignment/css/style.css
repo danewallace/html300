@@ -377,14 +377,15 @@ h1 {
   background: lightblue;
   justify-items: center; }
 
-.scene {
+.art-scene {
   width: 300px;
   height: 300px;
   border: 1px solid #CCC;
   margin: 40px 0;
-  perspective: 600px; }
+  perspective: 600px;
+  justify-self: center; }
 
-.card {
+.art {
   width: 100%;
   height: 100%;
   transition: transform 1.5s;
@@ -392,10 +393,10 @@ h1 {
   cursor: pointer;
   position: relative; }
 
-.card.is-flipped {
+.art.is-flipped {
   transform: rotateX(180deg); }
 
-.card__face {
+.art__face {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -407,9 +408,9 @@ h1 {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden; }
 
-.card__face--front {
+.art__face--front {
   background: red; }
 
-.card__face--back {
+.art__face--back {
   background: blue;
   transform: rotateX(180deg); }
