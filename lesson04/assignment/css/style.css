@@ -368,6 +368,7 @@ h1 {
   color: #150f96; }
 
 .playlist-container {
+  margin-top: 1rem;
   display: grid;
   border: 1px solid;
   grid-gap: 1rem;

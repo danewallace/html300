@@ -1,5 +1,7 @@
-//Listener to toggle art flipping behavior for cover art
-var art = document.querySelector('.art');
-art.addEventListener( 'click', function() {
-  art.classList.toggle('is-flipped');
+// Removed listener from original source code and replaced with jquery
+// Original source code only functioned for a single element of the class
+
+// Toggles is-flipped class on each playlist cover
+$('.art').click(function(){
+  $(this).toggleClass('is-flipped');
 });

@@ -18,6 +18,7 @@ h1 {
 
 // Playlist container setup that includes cover art and copy
 .playlist-container {
+  margin-top: 1rem; 
   display: grid;
   border: 1px solid;
   grid-gap: 1rem;
