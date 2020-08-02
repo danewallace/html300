@@ -11,3 +11,22 @@ html {
 .main {
     padding: 2rem;
 }
+
+.nav {
+  background: $teal;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem 1rem;
+  flex: 1 1 auto;
+  &-wrap {
+    max-width: 1920px;
+  }
+  &__logo,
+  &__login {
+    font-size: 20px;
+    color: white;
+    decoration: none;
+  }
+}
