@@ -8,24 +8,36 @@ html {
     box-sizing: inherit;
 }
 
+p {
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+}
+
 .main {
+    width: 1200px;
     padding: 2rem;
     display: grid;
     grid-template-areas:
-    "header header"
-    "nav nav"
-    "side main"
-    "footer footer";
+      "header header"
+      "nav nav"
+      "side main"
+      "footer footer";
+    grid-template-columns: 30% 1fr;
+    grid-template-rows: 150px 80px 650px 150px;
 }
 
-
 .header {
-  background: $red;
+  background-color: $red;
   grid-area: header;
+  align-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav {
-  background: $green;
+  background-color: $green;
   grid-area: nav;
   display: flex;
   justify-content: space-between;
@@ -44,7 +56,7 @@ html {
   }
   &__item {
     display: inline-block;
-    font-size: 1rem;
+    font-size: 2rem;
     margin-right: 2rem;
     &:last-of-type {
       margin: 0;
@@ -57,18 +69,28 @@ html {
 }
 
 .sidebar {
-  background: $purple;
+  background-color: $purple;
   grid-area: side;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .main-content {
-  background: $orange;
+  background-color: $orange;
   grid-area: main;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer {
-  background: $blue;
+  background-color: $blue;
   grid-area: footer;
+  margin: 0 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
