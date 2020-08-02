@@ -384,26 +384,18 @@ p {
 
 .nav {
   background-color: #7ACB00;
-  grid-area: nav;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 1rem 0px;
-  flex: 1 1 auto; }
-  .nav-wrap {
-    max-width: 1920px; }
+  grid-area: nav; }
   .nav__list {
     padding: 0;
-    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
     list-style: none;
     text-align: center; }
   .nav__item {
     display: inline-block;
-    font-size: 2rem;
-    margin-right: 2rem; }
-    .nav__item:last-of-type {
-      margin: 0; }
+    font-size: 2rem; }
   .nav__link {
     color: white;
     text-decoration: none; }
