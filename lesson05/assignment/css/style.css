@@ -362,18 +362,25 @@ html {
   box-sizing: inherit; }
 
 .main {
-  padding: 2rem; }
+  padding: 2rem;
+  display: grid;
+  grid-template-areas: "header header" "nav nav" "side main" "footer footer"; }
 
 .header {
-  background: #F1352B; }
+  background: #F1352B;
+  grid-area: header; }
 
 .nav {
   background: #7ACB00;
+  grid-area: nav;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding: 2rem 1rem; }
+  padding: 1rem 0px;
+  flex: 1 1 auto; }
+  .nav-wrap {
+    max-width: 1920px; }
   .nav__list {
     padding: 0;
     margin: 0 auto;
@@ -381,7 +388,7 @@ html {
     text-align: center; }
   .nav__item {
     display: inline-block;
-    font-size: 20px;
+    font-size: 1rem;
     margin-right: 2rem; }
     .nav__item:last-of-type {
       margin: 0; }
@@ -390,10 +397,13 @@ html {
     text-decoration: none; }
 
 .sidebar {
-  background: #6E27C5; }
+  background: #6E27C5;
+  grid-area: side; }
 
 .main-content {
-  background: #FF6600; }
+  background: #FF6600;
+  grid-area: main; }
 
 .footer {
-  background: #150F96; }
+  background: #150F96;
+  grid-area: footer; }
