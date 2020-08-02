@@ -377,4 +377,31 @@ html {
   .nav__logo, .nav__login {
     font-size: 20px;
     color: white;
-    decoration: none; }
+    text-decoration: none;
+    margin: 0 auto 2rem;
+    width: 100%;
+    text-align: center; }
+    @media screen and (min-width: 768px) {
+      .nav__logo, .nav__login {
+        margin: 0;
+        width: auto; } }
+  .nav__login {
+    margin: 2rem auto 0; }
+    @media screen and (min-width: 768px) {
+      .nav__login {
+        margin: 0; } }
+  .nav__list {
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+    text-align: center; }
+  .nav__item {
+    display: inline-block;
+    font-size: 20px;
+    font-family: "Helvetica Neue", helvetica, arial, sans-serif;
+    margin-right: 2rem; }
+    .nav__item:last-of-type {
+      margin: 0; }
+  .nav__link {
+    color: #ffffff;
+    text-decoration: none; }
