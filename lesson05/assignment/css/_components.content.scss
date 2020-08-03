@@ -8,13 +8,16 @@ html {
     box-sizing: inherit;
 }
 
+// Text styling for all paragraph tags
 p {
   text-align: center;
   color: white;
   font-size: 2rem;
 }
 
+// Grid creation for all content
 .main {
+    //Width from mockup.xd file
     width: 1200px;
     padding: 2rem;
     display: grid;
@@ -23,63 +26,64 @@ p {
       "nav nav"
       "side main"
       "footer footer";
+        // Dimensions from mockup.xd file
     grid-template-columns: 30% 1fr;
     grid-template-rows: 150px 80px 650px 150px;
-}
+    //Header grid item which is also a flexbox to accomodate text alignment
+    .header {
+      background-color: $red;
+      grid-area: header;
+      align-content: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-.header {
-  background-color: $red;
-  grid-area: header;
-  align-content: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+    //Nav grid item which is also a flexbox to accomodate text alignment
+    .nav {
+      grid-area: nav;
+      background-color: $green;
+      margin: 0;
+      padding: 0 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &__item {
+        display: inline-block;
+        font-size: 2rem;
+        padding: 0;
+      }
+      &__link {
+        color: white;
+        text-decoration: none;
+      }
+    }
 
-.nav {
-  background-color: $green;
-  grid-area: nav;
-  &__list {
-    padding: 0;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    list-style: none;
-    text-align: center;
-  }
-  &__item {
-    display: inline-block;
-    font-size: 2rem;
+    //Sidebar grid item which is also a flexbox to accomodate text alignment
+    .sidebar {
+      background-color: $purple;
+      grid-area: side;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-  }
-  &__link {
-    color: white;
-    text-decoration: none;
-  }
-}
+    //Main-content grid item which is also a flexbox to accomodate text alignment
+    .main-content {
+      background-color: $orange;
+      grid-area: main;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-.sidebar {
-  background-color: $purple;
-  grid-area: side;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.main-content {
-  background-color: $orange;
-  grid-area: main;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.footer {
-  background-color: $blue;
-  grid-area: footer;
-  margin: 0 3rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    //Footer grid item which is also a flexbox to accomodate text alignment
+    .footer {
+      background-color: $blue;
+      grid-area: footer;
+      margin: 0 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 }
