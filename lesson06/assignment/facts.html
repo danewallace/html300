@@ -14,8 +14,9 @@
 
 <body>
 
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Assignment06</a>
+    <a class="navbar-brand" href="index.html"><span style='font-size:100px;'>&#128049;</span></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -23,18 +24,21 @@
       <div class="navbar-nav">
         <a class="nav-item nav-link" href="index.html">Home</a>
         <a class="nav-item nav-link" href="images.html">Images</a>
-        <a class="nav-item nav-link active" href="accordion.html">Accordion</a>
-        <a class="nav-item nav-link" href="grid.html">Grid <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link active" href="facts.html">Facts  <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="grid.html">Grid</a>
       </div>
     </div>
   </nav>
+
+
   <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">Cat facts</h1>
   <div class="accordion" id="accordionExample">
-    <div class="card">
+</script>
+    <div class="card" data-toggle="tooltip" data-placement="top" title="Click for more information.">
       <div class="card-header" id="factOne">
         <h2 class="mb-0">
           <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-            More than Meow! Cats Can Make Over 90 Different Sounds
+            Cats Can Make Over 90 Different Sounds
           </button>
         </h2>
       </div>
@@ -54,7 +58,7 @@
         </div>
       </div>
     </div>
-    <div class="card">
+    <div class="card" data-toggle="tooltip" data-placement="top" title="Click for more information.">
       <div class="card-header" id="factTwo">
         <h2 class="mb-0">
           <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -72,7 +76,7 @@
         </div>
       </div>
     </div>
-    <div class="card">
+    <div class="card" data-toggle="tooltip" data-placement="top" title="Click for more information.">
       <div class="card-header" id="factThree">
         <h2 class="mb-0">
           <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
@@ -94,6 +98,27 @@
       </div>
     </div>
   </div>
+  <div class="card" data-toggle="tooltip" data-placement="top" title="Click for more information.">
+    <div class="card-header" id="factFour">
+      <h2 class="mb-0">
+        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          Milk Is Not Good For Cats! Most Cats Are Lactose Intolerant
+        </button>
+      </h2>
+    </div>
+    <div id="collapseFour" class="collapse" aria-labelledby="factFour" data-parent="#accordionExample">
+      <div class="card-body">
+
+Some people think that feeding cats milk is good for them. This supposed cat fact is really a myth. Perhaps it’s all those cartoons we’ve seen featuring kittens lapping up milk from saucers, but cats are actually lactose intolerant and feeding them cow’s milk is not good for their digestive system.
+
+It’s true, however, that kittens need milk in order to survive. The best milk a kitten can have is the milk from its own mother. When a kitten is orphaned, there is special kitten formula you can use to ensure the kitten develops into a healthy adult cat. Despite the myth, cow’s milk doesn’t have the right set of nutrients to help a kitten grow. While some cats are not lactose intolerant, the very best thing for all cats to drink is fresh water.
+        <br>
+        <br>
+        <a href="https://interesting-facts.com/cat-facts/#milk-is-not-good-for-cats-most-cats-are-lactose-intolerant">Source</a>
+      </div>
+    </div>
+  </div>
+</div>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
