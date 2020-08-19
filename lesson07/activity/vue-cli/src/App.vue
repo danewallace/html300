@@ -8,7 +8,17 @@
     <br>
     <button type="button" name="button" v-on:click="increase">Button</button>
     <p>{{ counter }}</p>
-
+    <br>
+    <p v-if="show">Some Text</p>
+    <button type="button" name="button" v-on:click="show = !show">Button two</button>
+    <br>
+    <ul v-for="ingredient in ingredients">
+      <li >{{ ingredient }}</li>
+    </ul>
+    <br>
+    <ul v-for="person in persons">
+      <li >{{ person.name }} {{ person }}</li>
+    </ul>
     <!-- <h2>Essential Links</h2>
     <ul>
       <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
