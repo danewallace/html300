@@ -27,9 +27,9 @@
 
   <b-form @submit="onSubmit">
     <!-- Click me button -->
-    <b-button v-on:click="disabled = !disabled">Click Me</b-button>
+    <b-button  class="d-incline-block" v-on:click="disabled = !disabled">Click Me</b-button>
     <!-- Wrapper container to enable tooltip on disabled button -->
-    <div>
+    <div class="d-inline-block">
       <span id="disabled-wrapper" class="d-inline-block" tabindex="0">
         <!-- Submit Button -->
         <b-button type="submit" style="pointer-events: none;" :disabled="disabled">Submit</b-button>
