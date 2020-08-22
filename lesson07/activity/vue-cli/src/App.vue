@@ -25,22 +25,24 @@
   <!-- Form activity -->
   <h1 class="formTitle">{{ formTitle }}</h1>
 
-  <b-form @submit="onSubmit">
+  <!-- Bootsrap form -->
+  <form>
     <!-- Click me button -->
-    <b-button  class="d-incline-block" v-on:click="disabled = !disabled">Click Me</b-button>
+    <b-button class="d-incline-block" v-on:click="disabled = !disabled">Click Me</b-button>
     <!-- Wrapper container to enable tooltip on disabled button -->
-    <div class="d-inline-block">
+    <b-form-group class="d-inline-block">
       <span id="disabled-wrapper" class="d-inline-block" tabindex="0">
         <!-- Submit Button -->
-        <b-button type="submit" style="pointer-events: none;" :disabled="disabled">Submit</b-button>
+        <b-button type="submit" :disabled="disabled">Submit</b-button>
       </span>
       <!-- Tooltip -->
       <b-tooltip target="disabled-wrapper" :disabled="!disabled">Click the other button</b-tooltip>
-    </div>
-  </b-form>
+    </b-form-group>
+  </form>
 
 </div>
 </template>
+
 
 <script>
 export default {
@@ -76,8 +78,21 @@ export default {
       this.counter++;
     },
     onSubmit(evt) {
-        evt.preventDefault()
-        alert(JSON.stringify(this.form))
+      evt.preventDefault()
+      alert(JSON.stringify(this.form))
+    },
+    onReset(evt) {
+      evt.preventDefault()
+      // Reset our form values
+      this.form.email = ''
+      this.form.name = ''
+      this.form.food = null
+      this.form.checked = []
+      // Trick to reset/clear native browser form validation state
+      this.show = false
+      this.$nextTick(() => {
+        this.show = true
+      })
     }
   }
 }
