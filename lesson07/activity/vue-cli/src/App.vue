@@ -25,10 +25,19 @@
   <!-- Form activity -->
   <h1 class="formTitle">{{ formTitle }}</h1>
 
-  <form>
-    <input type="button" id="clickMeBtn" v-on:click="disabled = !disabled" value="Click Me">
-    <input type="submit" id="submitBtn" :disabled="disabled" value="Submit">
-  </form>
+  <b-form @submit="onSubmit">
+    <!-- Click me button -->
+    <b-button v-on:click="disabled = !disabled">Click Me</b-button>
+    <!-- Wrapper container to enable tooltip on disabled button -->
+    <div>
+      <span id="disabled-wrapper" class="d-inline-block" tabindex="0">
+        <!-- Submit Button -->
+        <b-button type="submit" style="pointer-events: none;" :disabled="disabled">Submit</b-button>
+      </span>
+      <!-- Tooltip -->
+      <b-tooltip target="disabled-wrapper">Click the other button</b-tooltip>
+    </div>
+  </b-form>
 
   <!-- <h2>Essential Links</h2>
     <ul>
@@ -78,6 +87,10 @@ export default {
     },
     increase: function() {
       this.counter++;
+    },
+    onSubmit(evt) {
+        evt.preventDefault()
+        alert(JSON.stringify(this.form))
     }
   }
 }
