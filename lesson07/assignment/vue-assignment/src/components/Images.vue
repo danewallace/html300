@@ -23,8 +23,8 @@
   <section class="gallery-container">
     <div class="row text-center text-lg-left">
       <div class="col-lg-3 col-md-4 col-6" v-for="image in catImages">
-        <a href={{ image.href }} class="d-block mb-4 h-100">
-          <img class="img-fluid img-thumbnail" src={{ image.src }} alt="">
+        <a v-bind:href="link" target="_blank" class="d-block mb-4 h-100">
+          <img class="img-fluid img-thumbnail" v-bind:src="source" alt="">
         </a>
       </div>
     </div>
@@ -118,12 +118,12 @@ export default {
       title: "Cat images",
       catImages: [
         {
-          href: "https://source.unsplash.com/_VX-6amHgDY/",
-          src: "https://source.unsplash.com/_VX-6amHgDY/400x300"
+          link: "https://source.unsplash.com/_VX-6amHgDY/",
+          source: "https://source.unsplash.com/_VX-6amHgDY/400x300"
         },
         {
-          href: "https://source.unsplash.com/J8meHFhqSCM/",
-          src: "https://source.unsplash.com/_VX-6amHgDY/400x300"
+          link: "https://source.unsplash.com/J8meHFhqSCM/",
+          source: "https://source.unsplash.com/_VX-6amHgDY/400x300"
         }
       ]
     }
