@@ -8,12 +8,10 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <div class="navbar-nav">
             <router-link class="nav-item nav-link" to="/">Home</router-link>
             <router-link class="nav-item nav-link" to="/images">Images</router-link>
             <router-link class="nav-item nav-link active" to="/facts">Facts<span class="sr-only">(current)</span></router-link>
             <router-link class="nav-item nav-link" to="/social">Social</router-link>
-          </div>
         </div>
       </div>
     </nav>
