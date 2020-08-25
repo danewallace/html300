@@ -20,15 +20,15 @@
   <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0" style="margin-left: 1rem;"> {{ title }} </h1>
 
 <!-- Looped gallery container -->
-  <!-- <section class="gallery-container">
+  <section class="gallery-container">
     <div class="row text-center text-lg-left">
-      <div class="col-lg-3 col-md-4 col-6 v-for="image in catImages">
+      <div class="col-lg-3 col-md-4 col-6" v-for="image in catImages">
         <a href={{ image.href }} class="d-block mb-4 h-100">
           <img class="img-fluid img-thumbnail" src={{ image.src }} alt="">
         </a>
       </div>
     </div>
-  </section> -->
+  </section>
 
   <!-- Original gallery container -->
   <section class="gallery-container">
