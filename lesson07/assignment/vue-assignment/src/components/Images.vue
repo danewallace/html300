@@ -22,7 +22,7 @@
 <!-- Looped gallery container -->
   <!-- <section class="gallery-container">
     <div class="row text-center text-lg-left">
-      <div v-for="image in catImages">
+      <div class="col-lg-3 col-md-4 col-6 v-for="image in catImages">
         <a href={{ image.href }} class="d-block mb-4 h-100">
           <img class="img-fluid img-thumbnail" src={{ image.src }} alt="">
         </a>
