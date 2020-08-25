@@ -9,10 +9,10 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <div class="navbar-nav">
-            <router-link class="nav-item nav-link active" to="/">Home</router-link>
+            <router-link class="nav-item nav-link" to="/">Home</router-link>
             <router-link class="nav-item nav-link" to="/images">Images</router-link>
             <router-link class="nav-item nav-link" to="/facts">Facts</router-link>
-            <router-link class="nav-item nav-link" to="/social">Social<span class="sr-only">(current)</span></router-link>
+            <router-link class="nav-item nav-link active" to="/social">Social<span class="sr-only">(current)</span></router-link>
           </div>
         </div>
       </div>
