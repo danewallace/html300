@@ -115,7 +115,17 @@ export default {
   name: "Images",
   data() {
     return {
-      title: "Cat images"
+      title: "Cat images",
+      images: [
+        {
+          href: "https://source.unsplash.com/_VX-6amHgDY/",
+          src: "https://source.unsplash.com/_VX-6amHgDY/400x300"
+        },
+        {
+          href: "https://source.unsplash.com/J8meHFhqSCM/",
+          src: "https://source.unsplash.com/_VX-6amHgDY/400x300"
+        }
+      ]
     }
   }
 };
