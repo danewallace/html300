@@ -20,7 +20,7 @@
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
         <h1 class="display-4"><span>&#128075;</span></h1>
-        <p class="lead">This assignment is an introduction to Bootstrap. Click the links above to explore some features.</p>
+        <p class="lead">  {{ msg }}</p>
       </div>
     </div>
   </div>
@@ -29,7 +29,10 @@
 <script>
 export default {
   name: "Home",
-  components: {
+  data () {
+    return {
+      msg: "This site has been created using Vue, Vue Router, and Bootstrap."
+    }
   }
 };
 </script>
