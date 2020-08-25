@@ -17,7 +17,7 @@
     </nav>
 
   <!-- Page heading -->
-    <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0" style="margin-left: 1rem;">Social</h1>
+    <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0" style="margin-left: 1rem;"> {{ title }} </h1>
 
     <!-- Bootstrap grid declaration -->
     <div class="row">
@@ -27,10 +27,24 @@
       </div>
       <!-- Bootstrap grid item for page copy -->
       <div class="col-xl-4 col-lg-5 col-sm-6 col-12 p-5">
-        <p class="lead text-left">Meet Moon and Miu Miu</p>
-        <p class="text-left">They're a long-haired tuxedo cat and Scottish Fold that grew up in New York City and currently reside in sunny Los Angeles, CA. </p>
-        <a href="https://www.instagram.com/moonandmiumiu/" class="btn btn-ins" style="background: #125688; color: white;"><i class="fab fa-instagram pr-1"></i> Follow on Instagram</a>
+        <p class="lead text-left"> {{ heading }} </p>
+        <p class="text-left"> {{ msg }} </p>
+        <a href="https://www.instagram.com/moonandmiumiu/" class="btn btn-ins" style="background: #125688; color: white;"><i class="fab fa-instagram pr-1"></i> {{ btnText }}</a>
       </div>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  name: "Social",
+  data () {
+    return {
+      title: "Social",
+      heading: "Meet Moon and Miu Miu",
+      msg: "They're a long-haired tuxedo cat and Scottish Fold that grew up in New York City and currently reside in sunny Los Angeles, CA.",
+      btnText: "Follow on Instagram"
+    }
+  }
+};
+</script>

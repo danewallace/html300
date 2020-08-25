@@ -17,7 +17,7 @@
     </nav>
 
     <!-- Page heading -->
-    <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0" style="margin-left: 1rem;">Cat photos</h1>
+    <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0" style="margin-left: 1rem;"> {{ title }} </h1>
 
     <!-- Image gallery container -->
     <section class="gallery-container">
@@ -98,3 +98,14 @@
     </section>
   </div>
 </template>
+
+<script>
+export default {
+  name: "Images",
+  data () {
+    return {
+      title: "Cat images"
+    }
+  }
+};
+</script>
