@@ -22,9 +22,9 @@
 <!-- Looped gallery container -->
   <section class="gallery-container">
     <div class="row text-center text-lg-left">
-      <div class="col-lg-3 col-md-4 col-6" v-for="image in catImages">
+      <div class="col-lg-3 col-md-4 col-6" v-for="image in catImages" :key="image.link">
         <a v-bind:href="link" target="_blank" class="d-block mb-4 h-100">
-          <img class="img-fluid img-thumbnail" v-bind:src="source" alt="">
+          <img class="img-fluid img-thumbnail" v-bind:src="image.source" alt="">
         </a>
       </div>
     </div>
