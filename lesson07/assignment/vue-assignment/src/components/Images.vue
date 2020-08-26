@@ -23,86 +23,8 @@
   <section class="gallery-container">
     <div class="row text-center text-lg-left">
       <div class="col-lg-3 col-md-4 col-6" v-for="image in catImages" :key="image.link">
-        <a v-bind:href="link" target="_blank" class="d-block mb-4 h-100">
+        <a v-bind:href="image.link" target="_blank" class="d-block mb-4 h-100">
           <img class="img-fluid img-thumbnail" v-bind:src="image.source" alt="">
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Original gallery container -->
-  <section class="gallery-container">
-    <div class="row text-center text-lg-left">
-      <!-- Interactive image that links to full image within responsive container -->
-      <div class="col-lg-3 col-md-4 col-6">
-        <a href="https://source.unsplash.com/EnsRjlBwQsg/" class="d-block mb-4 h-100">
-          <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/EnsRjlBwQsg/400x300" alt="">
-        </a>
-      </div>
-      <!-- Interactive image that links to full image within responsive container -->
-      <div class="col-lg-3 col-md-4 col-6">
-        <a href="https://source.unsplash.com/V7RugxejXH8/" class="d-block mb-4 h-100">
-          <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/V7RugxejXH8/400x300" alt="">
-        </a>
-      </div>
-      <!-- Interactive image that links to full image within responsive container -->
-      <div class="col-lg-3 col-md-4 col-6">
-        <a href="https://source.unsplash.com/ZEd44nDPTfA/" class="d-block mb-4 h-100">
-          <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/ZEd44nDPTfA/400x300" alt="">
-        </a>
-      </div>
-      <!-- Interactive image that links to full image within responsive container -->
-      <div class="col-lg-3 col-md-4 col-6">
-        <a href="https://source.unsplash.com/FT9SsFEXqF4/" class="d-block mb-4 h-100">
-          <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/FT9SsFEXqF4/400x300" alt="">
-        </a>
-      </div>
-      <!-- Interactive image that links to full image within responsive container -->
-      <div class="col-lg-3 col-md-4 col-6">
-        <a href="https://source.unsplash.com/_STvosrG-pw/" class="d-block mb-4 h-100">
-          <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/_STvosrG-pw/400x300" alt="">
-        </a>
-      </div>
-      <!-- Interactive image that links to full image within responsive container -->
-      <div class="col-lg-3 col-md-4 col-6">
-        <a href="https://source.unsplash.com/BMKtREjthyo/" class="d-block mb-4 h-100">
-          <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/BMKtREjthyo/400x300" alt="">
-        </a>
-      </div>
-      <!-- Interactive image that links to full image within responsive container -->
-      <div class="col-lg-3 col-md-4 col-6">
-        <a href="https://source.unsplash.com/bGG85MrGV1o/" class="d-block mb-4 h-100">
-          <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/bGG85MrGV1o/400x300" alt="">
-        </a>
-      </div>
-      <!-- Interactive image that links to full image within responsive container -->
-      <div class="col-lg-3 col-md-4 col-6">
-        <a href="https://source.unsplash.com/eFJfJkufGCU/" class="d-block mb-4 h-100">
-          <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/eFJfJkufGCU/400x300" alt="">
-        </a>
-      </div>
-      <!-- Interactive image that links to full image within responsive container -->
-      <div class="col-lg-3 col-md-4 col-6">
-        <a href="https://source.unsplash.com/W8iQBo22Mp4/" class="d-block mb-4 h-100">
-          <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/W8iQBo22Mp4/400x300" alt="">
-        </a>
-      </div>
-      <!-- Interactive image that links to full image within responsive container -->
-      <div class="col-lg-3 col-md-4 col-6">
-        <a href="https://source.unsplash.com/hjLueu0RbV8/" class="d-block mb-4 h-100">
-          <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/hjLueu0RbV8/400x300" alt="">
-        </a>
-      </div>
-      <!-- Interactive image that links to full image within responsive container -->
-      <div class="col-lg-3 col-md-4 col-6">
-        <a href="https://source.unsplash.com/J8meHFhqSCM/" class="d-block mb-4 h-100">
-          <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/J8meHFhqSCM/400x300" alt="">
-        </a>
-      </div>
-      <!-- Interactive image that links to full image within responsive container -->
-      <div class="col-lg-3 col-md-4 col-6">
-        <a href="https://source.unsplash.com/_VX-6amHgDY/" class="d-block mb-4 h-100">
-          <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/_VX-6amHgDY/400x300" alt="">
         </a>
       </div>
     </div>
@@ -118,11 +40,51 @@ export default {
       title: "Cat images",
       catImages: [
         {
-          link: "https://source.unsplash.com/_VX-6amHgDY/",
-          source: "https://source.unsplash.com/_VX-6amHgDY/400x300"
+          link: "https://source.unsplash.com/EnsRjlBwQsg/",
+          source: "https://source.unsplash.com/EnsRjlBwQsg/400x300"
+        },
+        {
+          link: "https://source.unsplash.com/V7RugxejXH8/",
+          source: "https://source.unsplash.com/V7RugxejXH8/400x300"
+        },
+        {
+          link: "https://source.unsplash.com/ZEd44nDPTfA/",
+          source: "https://source.unsplash.com/ZEd44nDPTfA/400x300"
+        },
+        {
+          link: "https://source.unsplash.com/FT9SsFEXqF4/",
+          source: "https://source.unsplash.com/FT9SsFEXqF4/400x300"
+        },
+        {
+          link: "https://source.unsplash.com/_STvosrG-pw/",
+          source: "https://source.unsplash.com/_STvosrG-pw/400x300"
+        },
+        {
+          link: "https://source.unsplash.com/BMKtREjthyo/",
+          source: "https://source.unsplash.com/BMKtREjthyo/400x300"
+        },
+        {
+          link: "https://source.unsplash.com/bGG85MrGV1o/",
+          source: "https://source.unsplash.com/bGG85MrGV1o/400x300"
+        },
+        {
+          link: "https://source.unsplash.com/eFJfJkufGCU/",
+          source: "https://source.unsplash.com/eFJfJkufGCU/400x300"
+        },
+        {
+          link: "https://source.unsplash.com/W8iQBo22Mp4/",
+          source: "https://source.unsplash.com/W8iQBo22Mp4/400x300"
+        },
+        {
+          link: "https://source.unsplash.com/hjLueu0RbV8/",
+          source: "https://source.unsplash.com/hjLueu0RbV8/400x300"
         },
         {
           link: "https://source.unsplash.com/J8meHFhqSCM/",
+          source: "https://source.unsplash.com/J8meHFhqSCM/400x300"
+        },
+        {
+          link: "https://source.unsplash.com/_VX-6amHgDY/",
           source: "https://source.unsplash.com/_VX-6amHgDY/400x300"
         }
       ]
