@@ -131,7 +131,12 @@ export default {
   name: "Facts",
   data () {
     return {
-      title: "Cat facts"
+      title: "Cat facts",
+      factCard: {
+        heading: '',
+        body:'',
+        link:''
+      }
     }
   }
 };
