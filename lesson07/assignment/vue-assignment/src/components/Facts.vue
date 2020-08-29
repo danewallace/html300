@@ -17,13 +17,28 @@
       </div>
     </nav>
 
+    <!-- Page heading -->
+    <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0" style="margin-left: 1rem;"> {{ title }} </h1>
+
+    <!-- Looped accordion card -->
+    <b-card no-body class="mb-1">
+      <b-card-header header-tag="header" class="p-1" role="tab" v-for="fact in facts" :key="fact.title">
+        <b-button block v-b-toggle.accordion-1 variant="info"> {{ fact.title }}</b-button>
+      </b-card-header>
+      <b-collapse id="accordion-1" accordion="my-accordion" role="tabpanel">
+        <b-card-body>
+          <b-card-text>{{ fact.body }}</b-card-text>
+        </b-card-body>
+      </b-collapse>
+    </b-card>
+
+    <!-- Original static accordion cards -->
     <b-card no-body class="mb-1">
       <b-card-header header-tag="header" class="p-1" role="tab">
         <b-button block v-b-toggle.accordion-1 variant="info">Accordion 1</b-button>
       </b-card-header>
-      <b-collapse id="accordion-1" visible accordion="my-accordion" role="tabpanel">
+      <b-collapse id="accordion-1" accordion="my-accordion" role="tabpanel">
         <b-card-body>
-          <b-card-text>I start opened because <code>visible</code> is <code>true</code></b-card-text>
           <b-card-text>{{ text }}</b-card-text>
         </b-card-body>
       </b-collapse>
@@ -57,6 +72,12 @@
   export default {
     data() {
       return {
+        title: 'Cat facts',
+        facts:[
+          {number: 1, title: 'Accordion 1', body: 'This is some text 1'},
+          {number: 2, title: 'Accordion 2', body: 'This is some text 2'},
+          {number: 3, title: 'Accordion 3', body: 'This is some text 3'}
+        ],
         text: `
           Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
           richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
