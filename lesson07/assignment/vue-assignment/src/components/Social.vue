@@ -23,13 +23,13 @@
     <div class="row">
       <!-- Bootstrap grid item for page image -->
       <div class="col-xl-8 col-lg-7 col-sm-6 col-12 p-5">
-        <img src="https://p46.f4.n0.cdn.getcloudapp.com/items/o0uxGLvW/moonandmiumiu.jpeg?v=cd58ce8822e2316f57d9e648a389acef" alt="..." class="img-fluid">
+        <img v-bind:src="source" alt="..." class="img-fluid">
       </div>
       <!-- Bootstrap grid item for page copy -->
       <div class="col-xl-4 col-lg-5 col-sm-6 col-12 p-5">
         <p class="lead text-left"> {{ heading }} </p>
         <p class="text-left"> {{ msg }} </p>
-        <a href="https://www.instagram.com/moonandmiumiu/" class="btn btn-ins" style="background: #125688; color: white;"><i class="fab fa-instagram pr-1"></i> {{ btnText }}</a>
+        <b-button pill v-bind:href="link">{{ btnText }}</b-button>
       </div>
     </div>
   </div>
@@ -43,7 +43,9 @@ export default {
       title: "Social",
       heading: "Meet Moon and Miu Miu",
       msg: "They're a long-haired tuxedo cat and Scottish Fold that grew up in New York City and currently reside in sunny Los Angeles, CA.",
-      btnText: "Follow on Instagram"
+      btnText: "Follow on Instagram",
+      source: 'https://p46.f4.n0.cdn.getcloudapp.com/items/o0uxGLvW/moonandmiumiu.jpeg?v=cd58ce8822e2316f57d9e648a389acef',
+      link: 'https://www.instagram.com/moonandmiumiu/'
     }
   }
 };
