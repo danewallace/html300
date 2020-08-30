@@ -30,6 +30,8 @@
         <p class="lead text-left"> {{ heading }} </p>
         <p class="text-left"> {{ msg }} </p>
         <b-button pill v-bind:href="link">{{ btnText }}</b-button>
+
+           <p>window width: {{ windowWidth }}</p>
       </div>
     </div>
   </div>
