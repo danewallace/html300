@@ -21,11 +21,11 @@
     <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0" style="margin-left: 1rem;"> {{ title }} </h1>
 
     <!-- Looped accordion card -->
-    <b-card no-body class="mb-1">
-      <b-card-header header-tag="header" class="p-1" role="tab" v-for="fact in facts" :key="fact.title">
+    <b-card no-body class="mb-1" v-for="(fact, index) in facts" :key="fact.title">
+      <b-card-header header-tag="header" class="p-1" role="tab" >
         <b-button block v-b-toggle.accordion-1 variant="info"> {{ fact.title }}</b-button>
       </b-card-header>
-      <b-collapse id="accordion-1" accordion="my-accordion" role="tabpanel">
+      <b-collapse v-bind:id="'accordion'+index" accordion="my-accordion" role="tabpanel">
         <b-card-body>
           <b-card-text>{{ fact.body }}</b-card-text>
         </b-card-body>
