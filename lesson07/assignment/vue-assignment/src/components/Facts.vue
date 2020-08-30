@@ -1,21 +1,21 @@
 <template>
   <div role="tablist">
 
-    <!-- Bootstrap navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <router-link class="navbar-brand" to="/"><span style='font-size:100px;'>&#128049;</span></router-link>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <router-link class="nav-item nav-link" to="/">Home</router-link>
+    <!-- Bootstrap vue navbar -->
+    <b-navbar toggleable="sm" type="light" variant="light">
+     <b-navbar-toggle target="nav-text-collapse"></b-navbar-toggle>
+
+     <b-navbar-brand><router-link class="navbar-brand" to="/"><span style='font-size:100px;'>&#128049;</span></router-link></b-navbar-brand>
+
+     <b-collapse id="nav-text-collapse" is-nav>
+       <b-navbar-nav>
+         <router-link class="nav-item nav-link" to="/">Home<span class="sr-only">(current)</span></router-link>
           <router-link class="nav-item nav-link" to="/images">Images</router-link>
           <router-link class="nav-item nav-link active" to="/facts">Facts<span class="sr-only">(current)</span></router-link>
           <router-link class="nav-item nav-link" to="/social">Social</router-link>
-        </div>
-      </div>
-    </nav>
+       </b-navbar-nav>
+     </b-collapse>
+   </b-navbar>
 
     <!-- Page heading -->
     <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0" style="margin-left: 1rem;"> {{ title }} </h1>
