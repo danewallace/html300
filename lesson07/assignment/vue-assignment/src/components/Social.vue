@@ -3,11 +3,11 @@
   <!-- Bootstrap vue navbar -->
   <b-navbar toggleable="sm" type="light" variant="light">
     <b-navbar-toggle target="nav-text-collapse"></b-navbar-toggle>
-
+    <!-- Emoji with route to / -->
     <b-navbar-brand>
       <router-link class="navbar-brand" to="/"><span style='font-size:100px;'>&#128049;</span></router-link>
     </b-navbar-brand>
-
+    <!-- Router links with current page emphasized -->
     <b-collapse id="nav-text-collapse" is-nav>
       <b-navbar-nav>
         <router-link class="nav-item nav-link" to="/">Home<span class="sr-only">(current)</span></router-link>
@@ -21,22 +21,22 @@
   <!-- Page heading -->
   <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0" style="margin-left: 1rem;"> {{ title }} </h1>
 
-
   <!-- Bootstrap grid declaration -->
   <div class="row">
+    <!-- v-if v-else implementation that changes image and text based on button toggle -->
     <div class="col-xl-8 col-lg-7 col-sm-6 col-12 p-5" v-if="kittenMode">
       <img v-bind:src="kittenSource" alt="Photo of cute gray kitten" class="img-fluid">
       <p></p>
       <b-button variant="outline-primary" v-on:click="kittenMode = !kittenMode">Toggle Kitten Mode</b-button>
       <p class="text-success"> {{ activatedText }}</p>
     </div>
+    <!-- v-else block -->
     <div class="col-xl-8 col-lg-7 col-sm-6 col-12 p-5" v-else>
       <img v-bind:src="source" alt="Photo of two cats cuddling with each other" class="img-fluid">
       <p></p>
       <b-button variant="outline-primary" v-on:click="kittenMode = !kittenMode">Toggle Kitten Mode</b-button>
       <p class="text-danger"> {{ deactivatedText }} </p>
     </div>
-
     <!-- Bootstrap grid item for page copy -->
     <div class="col-xl-4 col-lg-5 col-sm-6 col-12 p-5">
       <p class="lead text-center"> {{ heading }} </p>
@@ -44,7 +44,6 @@
       <b-button pill v-bind:href="link">{{ btnText }}</b-button>
     </div>
   </div>
-
 </div>
 </template>
 
@@ -52,7 +51,6 @@
 export default {
   name: "Social",
   data() {
-
     return {
       title: "Social",
       heading: "Meet Moon and Miu Miu",
