@@ -24,7 +24,7 @@
     <div class="row text-center text-lg-left">
       <div class="col-lg-3 col-md-4 col-6" v-for="image in catImages" :key="image.link">
         <a v-bind:href="image.link" target="_blank" class="d-block mb-4 h-100">
-          <img class="img-fluid img-thumbnail" v-bind:src="image.source" alt="">
+          <img class="img-fluid img-thumbnail" v-bind:src="image.source" alt="Random photo of a cat">
         </a>
       </div>
     </div>

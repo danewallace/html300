@@ -25,14 +25,16 @@
   <!-- Bootstrap grid declaration -->
   <div class="row">
     <div class="col-xl-8 col-lg-7 col-sm-6 col-12 p-5" v-if="kittenMode">
-      <img v-bind:src="kittenSource" alt="..." class="img-fluid">
+      <img v-bind:src="kittenSource" alt="Photo of cute gray kitten" class="img-fluid">
       <p></p>
       <b-button variant="outline-primary" v-on:click="kittenMode = !kittenMode">Toggle Kitten Mode</b-button>
+      <p class="text-success"> {{ activatedText }}</p>
     </div>
     <div class="col-xl-8 col-lg-7 col-sm-6 col-12 p-5" v-else>
-      <img v-bind:src="source" alt="..." class="img-fluid">
+      <img v-bind:src="source" alt="Photo of two cats cuddling with each other" class="img-fluid">
       <p></p>
       <b-button variant="outline-primary" v-on:click="kittenMode = !kittenMode">Toggle Kitten Mode</b-button>
+      <p class="text-danger"> {{ deactivatedText }} </p>
     </div>
 
     <!-- Bootstrap grid item for page copy -->
@@ -56,10 +58,12 @@ export default {
       heading: "Meet Moon and Miu Miu",
       msg: "They're a long-haired tuxedo cat and Scottish Fold that grew up in New York City and currently reside in sunny Los Angeles, CA.",
       btnText: "Follow on Instagram",
-      source: 'https://p46.f4.n0.cdn.getcloudapp.com/items/o0uxGLvW/moonandmiumiu.jpeg?v=cd58ce8822e2316f57d9e648a389acef',
-      kittenSource: 'https://p46.f4.n0.cdn.getcloudapp.com/items/8LuPg7Kz/IMG_0187.JPG?source=viewer&v=805dcc1c7bd11a1afcec4c3adbe0f9c9',
+      source: 'https://p46.f4.n0.cdn.getcloudapp.com/items/o0uxGLvW/moonandmiumiu.jpeg?v=cd58ce8822e2316f57d9e648a389acef/400x300',
+      kittenSource: 'https://p46.f4.n0.cdn.getcloudapp.com/items/8LuPg7Kz/IMG_0187.JPG?source=viewer&v=805dcc1c7bd11a1afcec4c3adbe0f9c9/400x300',
       link: 'https://www.instagram.com/moonandmiumiu/',
-      kittenMode: false
+      kittenMode: false,
+      activatedText: "Kitten mode: Activated",
+      deactivatedText: "Kitten mode: Deactivated"
     }
   }
 };
