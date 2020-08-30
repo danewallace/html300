@@ -19,6 +19,12 @@
   <!-- Page heading -->
     <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0" style="margin-left: 1rem;"> {{ title }} </h1>
 
+    <!-- will render only 'ELSE' -->
+<div>
+    <h2 v-if="b">IF</h2>
+    <h2 v-else>ELSE</h2>
+</div>
+
     <!-- Bootstrap grid declaration -->
     <div class="row">
       <!-- Bootstrap grid item for page image -->
@@ -27,11 +33,9 @@
       </div>
       <!-- Bootstrap grid item for page copy -->
       <div class="col-xl-4 col-lg-5 col-sm-6 col-12 p-5">
-        <p class="lead text-left"> {{ heading }} </p>
-        <p class="text-left"> {{ msg }} </p>
+        <p class="lead text-center"> {{ heading }} </p>
+        <p class="text-center"> {{ msg }} </p>
         <b-button pill v-bind:href="link">{{ btnText }}</b-button>
-
-           <p>window width: {{ windowWidth }}</p>
       </div>
     </div>
   </div>
@@ -41,13 +45,17 @@
 export default {
   name: "Social",
   data () {
+
     return {
       title: "Social",
       heading: "Meet Moon and Miu Miu",
       msg: "They're a long-haired tuxedo cat and Scottish Fold that grew up in New York City and currently reside in sunny Los Angeles, CA.",
       btnText: "Follow on Instagram",
       source: 'https://p46.f4.n0.cdn.getcloudapp.com/items/o0uxGLvW/moonandmiumiu.jpeg?v=cd58ce8822e2316f57d9e648a389acef',
-      link: 'https://www.instagram.com/moonandmiumiu/'
+      link: 'https://www.instagram.com/moonandmiumiu/',
+      a: true,
+      b: false
+
     }
   }
 };
