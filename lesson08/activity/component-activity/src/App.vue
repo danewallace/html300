@@ -1,12 +1,11 @@
-<template>
-  <div id="app">
-
-  </div>
-</template>
-
 <script>
+import Post from './Post.vue';
+
 export default {
   name: 'app',
+  components: {
+    Post
+  },
   data () {
     return {
       posts: [
@@ -19,6 +18,19 @@ export default {
   }
 }
 </script>
+
+<template>
+  <div id="app">
+    <section v-if="posts">
+      <post
+        v-for="post in posts"
+        v-bind:post="post"
+        v_bind:key="post.id"
+      >
+    </post>
+    </section>
+  </div>
+</template>
 
 <style lang="scss">
 #app {
