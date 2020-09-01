@@ -1,6 +1,8 @@
 <template>
  <div id='picture-data'>
-   {{link}}
+   <p>{{link}}</p>
+   <p>{{src}}</p>
+   <p>{{alt}}</p>
  </div>
 </template>
 
