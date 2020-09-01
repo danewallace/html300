@@ -21,9 +21,9 @@
   <!-- Page heading -->
   <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0" style="margin-left: 1rem;"> {{ title }} </h1>
 
-  <section class="gallery-container" v-for="picture in pictures" :key="picture.link">
+  <section class="gallery-container" >
     <div class="row text-center text-lg-left">
-      <div class="col-lg-3 col-md-4 col-6" >
+      <div class="col-lg-3 col-md-4 col-6" v-for="picture in pictures" :key="picture.link">
         <picture-data :link="picture.link" :src="picture.src" :alt="picture.alt"/>
       </div>
     </div>
