@@ -43,7 +43,17 @@ export default {
       title: 'Cat photos',
       pictures: [
         {link: 'https://source.unsplash.com/EnsRjlBwQsg/', src: 'https://source.unsplash.com/EnsRjlBwQsg/400x300', alt: 'Random photo of cat'},
-        {link: 'https://source.unsplash.com/V7RugxejXH8/', src: 'https://source.unsplash.com/V7RugxejXH8/400x300', alt: 'Random photo of cat'}
+        {link: 'https://source.unsplash.com/V7RugxejXH8/', src: 'https://source.unsplash.com/V7RugxejXH8/400x300', alt: 'Random photo of cat'},
+        {link: 'https://source.unsplash.com/ZEd44nDPTfA/', src: 'https://source.unsplash.com/ZEd44nDPTfA/400x300', alt: 'Random photo of cat'},
+        {link: 'https://source.unsplash.com/FT9SsFEXqF4/', src: 'https://source.unsplash.com/FT9SsFEXqF4/400x300', alt: 'Random photo of cat'},
+        {link: 'https://source.unsplash.com/_STvosrG-pw/', src: 'https://source.unsplash.com/_STvosrG-pw/400x300', alt: 'Random photo of cat'},
+        {link: 'https://source.unsplash.com/BMKtREjthyo/', src: 'https://source.unsplash.com/BMKtREjthyo/400x300', alt: 'Random photo of cat'},
+        {link: 'https://source.unsplash.com/bGG85MrGV1o/', src: 'https://source.unsplash.com/bGG85MrGV1o/400x300', alt: 'Random photo of cat'},
+        {link: 'https://source.unsplash.com/eFJfJkufGCU/', src: 'https://source.unsplash.com/eFJfJkufGCU/400x300', alt: 'Random photo of cat'},
+        {link: 'https://source.unsplash.com/hjLueu0RbV8/', src: 'https://source.unsplash.com/hjLueu0RbV8/400x300', alt: 'Random photo of cat'},
+        {link: 'https://source.unsplash.com/J8meHFhqSCM/', src: 'https://source.unsplash.com/J8meHFhqSCM/400x300', alt: 'Random photo of cat'},
+        {link: 'https://source.unsplash.com/_VX-6amHgDY/', src: 'https://source.unsplash.com/_VX-6amHgDY/400x300', alt: 'Random photo of cat'},
+        {link: 'https://source.unsplash.com/W8iQBo22Mp4/', src: 'https://source.unsplash.com/W8iQBo22Mp4/400x300', alt: 'Random photo of cat'}
       ]
     }
   }
