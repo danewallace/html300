@@ -1,8 +1,8 @@
 <template>
  <div id='picture-data'>
-   <p>{{link}}</p>
-   <p>{{src}}</p>
-   <p>{{alt}}</p>
+   <a v-bind:href="link" target="_blank" class="d-block mb-4 h-100">
+     <img class="img-fluid img-thumbnail" v-bind:src="source" alt="alt">
+   </a>
  </div>
 </template>
 

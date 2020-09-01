@@ -22,7 +22,11 @@
   <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0" style="margin-left: 1rem;"> {{ title }} </h1>
 
   <section class="gallery-container" v-for="picture in pictures" :key="picture.link">
-    <picture-data :link="picture.link" :src="picture.src" :alt="picture.alt"/>
+    <div class="row text-center text-lg-left">
+      <div class="col-lg-3 col-md-4 col-6" >
+        <picture-data :link="picture.link" :src="picture.src" :alt="picture.alt"/>
+      </div>
+    </div>
   </section>
 </div>
 </template>
@@ -40,12 +44,7 @@ export default {
       pictures: [
         {link: 'https://source.unsplash.com/EnsRjlBwQsg/', src: 'https://source.unsplash.com/EnsRjlBwQsg/400x300', alt: 'Random photo of cat'},
         {link: 'https://source.unsplash.com/V7RugxejXH8/', src: 'https://source.unsplash.com/V7RugxejXH8/400x300', alt: 'Random photo of cat'}
-      ],
-      picture: {
-        link: 'linkTest',
-        src: 'srcTest',
-        alt: 'altTest'
-      }
+      ]
     }
   }
 }
