@@ -1,11 +1,13 @@
 <template>
- <div id='picture-info'>
+ <div id='picture-data'>
    {{username}}
  </div>
 </template>
 
 <script>
 export default {
- props: ['username']
+ props: {
+   username: String
+ }
 }
 </script>
