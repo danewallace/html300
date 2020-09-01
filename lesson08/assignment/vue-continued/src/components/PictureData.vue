@@ -1,13 +1,15 @@
 <template>
  <div id='picture-data'>
-   {{username}}
+   {{link}}
  </div>
 </template>
 
 <script>
 export default {
  props: {
-   username: String
+   link: String,
+   src: String,
+   alt: String,
  }
 }
 </script>
