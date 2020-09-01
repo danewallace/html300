@@ -37,6 +37,10 @@ export default {
   data() {
     return {
       title: 'Cat photos',
+      pictures: [
+        { link: 'linkTest1', src: 'srcTest1', alt: 'altTest1'},
+        { link: 'linkTest2', src: 'srcTest2', alt: 'altTest2'},  
+      ],
       picture: {
         link: 'linkTest',
         src: 'srcTest',
