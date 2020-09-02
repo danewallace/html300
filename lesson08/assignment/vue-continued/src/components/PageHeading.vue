@@ -1,6 +1,6 @@
 <template>
   <div class="page-heading">
-    <slot name="page-title"></slot>
+    <slot name="page-title">Default title</slot>
   </div>
 </template>
 
