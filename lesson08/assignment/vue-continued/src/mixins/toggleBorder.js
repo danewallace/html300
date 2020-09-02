@@ -1,5 +1,15 @@
 export const toggleBorder = {
   created() {
-    console.log("Hello from the mixin")
+    this.logMessage()
+  },
+  data() {
+    return {
+      message: 'I am such a nice mixin'
+    }
+  },
+  methods: {
+    logMessage() {
+      console.log(this.message)
+    }
   }
 }
