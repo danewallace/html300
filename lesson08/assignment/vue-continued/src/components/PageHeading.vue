@@ -1,4 +1,5 @@
 <template>
+  <!-- Named slot with default value -->
   <div class="page-heading">
     <slot name="page-title">Default title</slot>
   </div>

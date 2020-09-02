@@ -28,7 +28,9 @@
   <!-- Gallery container using prop and iteration overy array of picture objects -->
   <section class="gallery-container" >
     <div class="row text-center text-lg-left">
+      <!-- Iteration over array of picture data objects defined in script data -->
       <div class="col-lg-3 col-md-4 col-6" v-for="picture in pictures" :key="picture.link">
+        <!-- Uses picture data prop defined in PictureData component -->
         <picture-data :link="picture.link" :src="picture.src" :alt="picture.alt"/>
       </div>
     </div>
@@ -37,18 +39,19 @@
 </template>
 
 <script>
+// Imports Heading and PictureData components
 import PictureData from "@/components/PictureData.vue";
 import PageHeading from "@/components/PageHeading.vue";
-import { toggleBorder } from '@/mixins/toggleBorder.js'
 
 export default {
-  mixins: [toggleBorder],
+  // Registering imported components
   components: {
     PictureData,
     PageHeading
   },
   data() {
     return {
+      // Array declaration of picture objects
       pictures: [
         {link: 'https://source.unsplash.com/EnsRjlBwQsg/', src: 'https://source.unsplash.com/EnsRjlBwQsg/400x300', alt: 'Random photo of cat'},
         {link: 'https://source.unsplash.com/V7RugxejXH8/', src: 'https://source.unsplash.com/V7RugxejXH8/400x300', alt: 'Random photo of cat'},

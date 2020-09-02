@@ -1,4 +1,4 @@
-export const toggleBorder = {
+export const addBorder = {
   data() {
     return {
       catImage: {
