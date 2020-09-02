@@ -29,14 +29,14 @@
   <div class="row">
     <!-- v-if v-else implementation that changes image and text based on button toggle -->
     <div class="col-xl-8 col-lg-7 col-sm-6 col-12 p-5" v-if="kittenMode">
-      <img v-bind:src="kittenSource" alt="Photo of cute gray kitten" class="img-fluid">
+      <img v-bind:src="kittenSource" alt="Photo of cute gray kitten" :class="[isActive ? activeClass : '', imgFluid]" @click="isActive = !isActive">
       <p></p>
       <b-button variant="outline-primary" v-on:click="kittenMode = !kittenMode">Toggle Kitten Mode</b-button>
       <p class="text-success"> {{ activatedText }}</p>
     </div>
     <!-- v-else block -->
     <div class="col-xl-8 col-lg-7 col-sm-6 col-12 p-5" v-else>
-      <img v-bind:src="source" alt="Photo of two cats cuddling with each other" class="img-fluid">
+      <img v-bind:src="source" alt="Photo of two cats cuddling with each other" :class="[isActive ? activeClass : '', imgFluid]"  @click="isActive = !isActive">
       <p></p>
       <b-button variant="outline-primary" v-on:click="kittenMode = !kittenMode">Toggle Kitten Mode</b-button>
       <p class="text-danger"> {{ deactivatedText }} </p>
@@ -69,8 +69,19 @@ export default {
       link: 'https://www.instagram.com/moonandmiumiu/',
       kittenMode: false,
       activatedText: "Kitten mode: Activated",
-      deactivatedText: "Kitten mode: Deactivated"
+      deactivatedText: "Kitten mode: Deactivated",
+      activeClass: 'border-on-click',
+      imgFluid: 'img-fluid',
+      isActive: true
     }
   }
 };
 </script>
+
+<style scoped>
+
+.border-on-click {
+  border: 5px solid green;
+}
+
+</style>
