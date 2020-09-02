@@ -15,11 +15,11 @@ In the last assignment in lesson06, you created a responsive website with Bootst
 -   Navigate to the root folder of this assignment within terminal in your fork, `lesson07/assignment`
 - 	Install the Vue CLI if you haven't already with `npm install -g @vue/cli`
 	- 	If installed correctly, running `vue --version` should return a number
--	To create your project using Vue CLI v2, 
+-	To create your project using Vue CLI v2,
 	-	run `vue init webpack my-title`
 	-	Follow the prompts:
 		-	Choose 1st option for Vue build (Runtime + Compiler)
-		-	Enter `Y` for the router prompt 
+		-	Enter `Y` for the router prompt
 		-	Enter `n` for lint and tests
 		-	Select npm or yarn (your choice, but yarn would need to be installed first)
 	-	Once done, `cd` into your project
@@ -28,7 +28,7 @@ In the last assignment in lesson06, you created a responsive website with Bootst
 		-	yarn command: run `yarn add sass-loader sass`
 	-	Installing Bootstrap (in your project directory)
 		-	npm command: run `npm install bootstrap-vue bootstrap jquery popper.js`
-		-	yarn command: run `yarn add bootstrap-vue bootstrap jquery popper.js`	
+		-	yarn command: run `yarn add bootstrap-vue bootstrap jquery popper.js`
 	-	Adding bootstrap/scss to the project
 		-	In your `src` folder, create a `main.scss` file
 		-	In that new file, add the following:
@@ -48,7 +48,7 @@ In the last assignment in lesson06, you created a responsive website with Bootst
 		-	You now have access to scss and all of bootstrap/bootstrap-vue. Watch the screencast for more information on using bootstrap-vue components and bootstrap features in Vue, as well as turning the bootstrap nav into an app router
 	-	To run the project, `cd` into your project and run `npm run dev` or `yarn dev` to launch the server
 
--	To create your project using Vue CLI v3, 
+-	To create your project using Vue CLI v3,
 	-	run `vue create my-title`
 	-	Choose 1st option (default)
 	-	Once done, `cd` into your project
@@ -60,7 +60,7 @@ In the last assignment in lesson06, you created a responsive website with Bootst
 		-	yarn command: run `yarn add sass-loader sass`
 	-	Installing Bootstrap (in your project directory)
 		-	npm command: run `npm install bootstrap-vue bootstrap jquery popper.js`
-		-	yarn command: run `yarn add bootstrap-vue bootstrap jquery popper.js`	
+		-	yarn command: run `yarn add bootstrap-vue bootstrap jquery popper.js`
 	-	Adding bootstrap/scss to the project
 		-	In your `src` folder, create a `main.scss` file
 		-	In that new file, add the following:
@@ -79,7 +79,7 @@ In the last assignment in lesson06, you created a responsive website with Bootst
 			```
 		-	You now have access to scss and all of bootstrap/bootstrap-vue. Watch the screencast for more information on using bootstrap-vue components and bootstrap features in Vue, as well as turning the bootstrap nav into an app router
 	-	To run the project, `cd` into your project and run `npm run serve` or `yarn serve` to launch the server
-	
+
 - 	Now, convert the 4 pages (as components, then set paths in your router to those imported components) from lesson06 with the following requirements:
 	-	All repeated content must be from variables in the `<script>` part of the `.vue` page (the `v-for` stuff)
 		- 	This means the content should not be hardcoded, but set in the script and populated on the page with Vue methods
@@ -88,11 +88,10 @@ In the last assignment in lesson06, you created a responsive website with Bootst
 	- 	For the third page, use a `v-for` to iterate through an object to fill out the content in an accordion.
 	-	Use of Vue router to navigate component pages
 	- 	Don't forget to add comments to your code explaining Bootstrap 4 classes you added and your VUE code.		
-- 	**Bonus:**  Use VUE to change the CSS.  
-- 	**Extra Bonus:**  Have an input box that changes the content as the user types.  
+- 	**Bonus:**  Use VUE to change the CSS. 
+- 	**Extra Bonus:**  Have an input box that changes the content as the user types. 
 
 ### To Submit:
 - Review the requirements in the rubric on Canvas
 - Create a pull request back to your forked master (not the original master), add brycebenson and ClovisI as reviewers -- create, but do not approve it!
 - Submit the pull request link in the assignment submission in Canvas
-
