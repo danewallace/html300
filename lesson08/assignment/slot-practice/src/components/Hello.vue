@@ -1,15 +1,20 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <slot name="line1"></slot>
+    <slot name="line2"></slot>
   </div>
 </template>
 
 <script>
 export default {
-  name: "HelloWorld",
-  props: {
-    msg: String
+  name: "hello",
+  data(){
+    return {
+      msg: 'Welcome to your Vue app'
+    }
   }
+
 };
 </script>
 
