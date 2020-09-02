@@ -1,6 +1,9 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../components/Home.vue";
+import Home from "../views/Home.vue";
+import Images from "../views/Images.vue";
+import Facts from "../views/Facts.vue";
+import Social from "../views/Social.vue";
 
 Vue.use(VueRouter);
 
@@ -13,29 +16,17 @@ const routes = [
   {
     path: "/images",
     name: "Images",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../components/Images.vue")
+    component: Images
   },
   {
     path: "/facts",
     name: "Facts",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../components/Facts.vue")
+    component: Facts
   },
   {
     path: "/social",
     name: "Social",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../components/Social.vue")
+    component: Social
   }
 ];
 
