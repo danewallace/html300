@@ -39,8 +39,10 @@
 <script>
 import PictureData from "@/components/PictureData.vue";
 import PageHeading from "@/components/PageHeading.vue";
+import { toggleBorder } from '@/mixins/toggleBorder.js'
 
 export default {
+  mixins: [toggleBorder],
   components: {
     PictureData,
     PageHeading
