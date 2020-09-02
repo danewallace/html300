@@ -24,8 +24,8 @@ export default {
 }
 </script>
 
-<!-- Styling for border box that is added around image when imgClicked function runs.
- This is intentionally not toggled, and will persist until page is refreshed  -->
+<!-- Styling for border box that is added around image when it is clicked
+and catImage.isClicked is set to true-->
 <style scoped>
 .border-on-click {
   border: 5px solid darkgray;
