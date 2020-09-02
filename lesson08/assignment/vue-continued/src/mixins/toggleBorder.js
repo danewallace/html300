@@ -1,15 +1,16 @@
 export const toggleBorder = {
-  created() {
-    this.logMessage()
-  },
   data() {
     return {
-      message: 'I am such a nice mixin'
+      catImage: {
+        applyBorder: 'border-on-click',
+        imgFluid: 'img-fluid',
+        isClicked: false
+      }
     }
   },
   methods: {
-    logMessage() {
-      console.log(this.message)
+    imgClicked() {
+      this.catImage.isClicked = true;
     }
   }
 }
