@@ -3,7 +3,7 @@ export const toggleBorder = {
     return {
       catImage: {
         applyBorder: 'border-on-click',
-        imgFluid: 'img-fluid',
+        imgFluid: 'img-fluid img-thumbnail',
         isClicked: false
       }
     }
