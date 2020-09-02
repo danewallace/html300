@@ -18,9 +18,14 @@
     </b-collapse>
   </b-navbar>
 
-  <!-- Page heading -->
-  <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0" style="margin-left: 1rem;"> {{ title }} </h1>
+  <!-- Page heading using named slot -->
+  <div id="page-heading">
+    <page-heading>
+      <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0" style="margin-left: 1rem;" slot="page-title">Cat photos</h1>
+    </page-heading>
+  </div>
 
+  <!-- Gallery container using prop and iteration overy array of picture objects -->
   <section class="gallery-container" >
     <div class="row text-center text-lg-left">
       <div class="col-lg-3 col-md-4 col-6" v-for="picture in pictures" :key="picture.link">
@@ -33,14 +38,15 @@
 
 <script>
 import PictureData from "@/components/PictureData.vue";
+import PageHeading from "@/components/PageHeading.vue";
 
 export default {
   components: {
-    PictureData
+    PictureData,
+    PageHeading
   },
   data() {
     return {
-      title: 'Cat photos',
       pictures: [
         {link: 'https://source.unsplash.com/EnsRjlBwQsg/', src: 'https://source.unsplash.com/EnsRjlBwQsg/400x300', alt: 'Random photo of cat'},
         {link: 'https://source.unsplash.com/V7RugxejXH8/', src: 'https://source.unsplash.com/V7RugxejXH8/400x300', alt: 'Random photo of cat'},

@@ -18,8 +18,12 @@
     </b-collapse>
   </b-navbar>
 
-  <!-- Page heading -->
-  <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0" style="margin-left: 1rem;"> {{ title }} </h1>
+  <!-- Page heading using named slot -->
+  <div id="page-heading">
+    <page-heading>
+      <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0" style="margin-left: 1rem;" slot="page-title">Cat Facts</h1>
+    </page-heading>
+  </div>
 
   <!-- v-for iteration over an array of fact objects -->
   <b-card no-body class="mb-1" v-for="(fact, index) in facts" :key="fact.title">
@@ -37,10 +41,14 @@
 </template>
 
 <script>
+import PageHeading from "@/components/PageHeading.vue";
+
 export default {
+  components: {
+    PageHeading
+  },
   data() {
     return {
-      title: 'Cat facts',
       facts: [{
           title: "Cats Can Make Over 90 Different Sounds",
           body: "Meow! Grrrr! Hisss! These are some of the noises we typically associate with cats. One of the most surprising cat facts is that cats can actually make almost 100 different sounds. From the peeps of kittens to the meows of adults, cats have a wide range of vocalizations. Kittens typically meow to their mother for milk, but most adult cats are only known to meow in the presence of humans. Cat owners must be seen as cat parents after all! Scientific studies of the noises cats make have mostly centered on classifying the various sounds. Some scientists have sought to learn the truth behind one of the most mysterious cat facts – just how do cats purr? The rhythmic vibration of the purr comes from the cat’s throat, but, as yet, there is no agreement on how exactly the sound is made. Do you ever get the feeling your cats are talking to you? Maybe they are! Cats have been known to imitate the sounds of human babies in order to attract the attention of their owner. They can also recognize the sound of their owner’s voice. However, cats lack the advanced mental capabilities of humans that enable language. So don’t worry – you’re still smarter than your cat."

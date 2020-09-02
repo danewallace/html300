@@ -18,8 +18,12 @@
     </b-collapse>
   </b-navbar>
 
-  <!-- Page heading -->
-  <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0" style="margin-left: 1rem;"> {{ title }} </h1>
+  <!-- Page heading using named slot -->
+  <div id="page-heading">
+    <page-heading>
+      <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0" style="margin-left: 1rem;" slot="page-title">Social</h1>
+    </page-heading>
+  </div>
 
   <!-- Bootstrap grid declaration -->
   <div class="row">
@@ -48,11 +52,15 @@
 </template>
 
 <script>
+import PageHeading from "@/components/PageHeading.vue";
+
 export default {
+  components: {
+    PageHeading
+  },
   name: "Social",
   data() {
     return {
-      title: "Social",
       heading: "Meet Moon and Miu Miu",
       msg: "They're a long-haired tuxedo cat and Scottish Fold that grew up in New York City and currently reside in sunny Los Angeles, CA.",
       btnText: "Follow on Instagram",
