@@ -1,17 +1,23 @@
 <template>
   <div class="wrapper">
     <h1 class="heading">Countries of Europe</h1>
-
-   
+    <section class="container" v-if="countries">
+      <card
+        v-for="country of countries"
+        :key="country.id"
+        :country="country"
+      />
+    </section>
   </div>
 </template>
 
 <script>
-
+import axios from 'axios';
+import Card from '~/components/Card.vue'
 
 export default {
   components: {
-    
+    Card
   },
   data() {
     return {
@@ -21,9 +27,16 @@ export default {
     }
   },
   mounted () {
-  
+  axios
+    .get('https://restcountries.eu/rest/v2/region/americas')
+    .then(response => (this.countries = response.data))
+    .catch(error => {
+      console.log(error)
+      this.errored = true
+    })
+    .finally(() => this.loading = false)
   }
-  
+
 }
 </script>
 
@@ -71,4 +84,3 @@ img {
   padding-top: 15px;
 }
 </style>
-
